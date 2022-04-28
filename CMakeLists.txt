@@ -3,16 +3,16 @@ project(design_patterns VERSION 1.0.0 LANGUAGES CXX)
 
 set(PATTERNS proxy)
 
-foreach(_dir IN ITEMS ${PATTERNS})
-    file(GLOB _files "${_dir}/*.cpp")
-    message(STATUS "Pattern '${_dir}':")
+foreach(DIRECTORY IN ITEMS ${PATTERNS})
+    file(GLOB PROJECT_SOURCES "${DIRECTORY}/*.cpp")
+    message(STATUS "Pattern '${DIRECTORY}':")
 
-    foreach(_file IN ITEMS ${_files})
-        get_filename_component(_file_name ${_file} NAME)
+    foreach(FILE IN ITEMS ${PROJECT_SOURCES})
+        get_filename_component(FILE_NAME ${FILE} NAME)
 
-        set(_project_name ${_file_name})
-        message(STATUS "  ${_dir}/${_file_name} is going to be built")
+        set(PROJECT_NAME ${FILE_NAME})
+        message(STATUS "  ${DIRECTORY}/${FILE_NAME} is going to be built")
 
-        add_executable(${_project_name} "${_dir}/${_file_name}")
+        add_executable(${PROJECT_NAME} "${DIRECTORY}/${FILE_NAME}")
     endforeach()
 endforeach()
