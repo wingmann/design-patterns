@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.22)
 project(design_patterns VERSION 1.0.0 LANGUAGES CXX)
 
-set(PATTERNS proxy)
+set(PATTERNS
+    proxy
+    singleton)
 
 foreach(DIRECTORY IN ITEMS ${PATTERNS})
     file(GLOB PROJECT_SOURCES "${DIRECTORY}/*.cpp")
