@@ -1,4 +1,5 @@
 set(CREATIONAL_PATTERNS
+    facade
     proxy)
 
 foreach(DIRECTORY IN ITEMS ${CREATIONAL_PATTERNS})

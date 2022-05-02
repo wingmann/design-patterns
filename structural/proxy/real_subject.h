@@ -14,7 +14,10 @@ public:
     ~real_subject() override = default;
 
 public:
-    void request() override { std::cout << "Real subject request\n"; }
+    void request() override
+    {
+        std::cout << "Real subject request\n";
+    }
 };
 
 #endif // WINGMANN_DESIGN_PATTERNS_PROXY_REAL_SUBJECT_H
