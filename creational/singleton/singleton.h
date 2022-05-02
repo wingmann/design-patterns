@@ -2,13 +2,14 @@
 #define WINGMANN_DESIGN_PATTERNS_SINGLETON_SINGLETON_H
 
 #include <iostream>
+#include <memory>
 
 /**
  * Singleton has private static variable to hold one instance of the class and method which gives
  * us a way to instantiate the class.
  */
-class Singleton {
-    static Singleton* instance_;
+class singleton {
+    static std::shared_ptr<singleton> instance_;
 
 public:
     /**
@@ -17,26 +18,32 @@ public:
      * @note
      * You can achieve the same effect by declaring the constructor and the operator as private.
      */
-    Singleton(const Singleton& singleton) = delete;
-    virtual ~Singleton() { delete instance_; }
-
-    Singleton& operator=(const Singleton& singleton) = delete;
+    singleton(const singleton& singleton) = delete;
+    virtual ~singleton() = default;
 
 public:
-    static Singleton* get()
+    singleton& operator=(const singleton& singleton) = delete;
+
+public:
+    static std::shared_ptr<singleton> get()
     {
-        if (!instance_) instance_ = new Singleton{};
+        class make_shared_enabler : public singleton { };
+
+        if (!instance_)
+            instance_ = std::make_shared<make_shared_enabler>();
+
         return instance_;
     }
 
-    static void reset() { delete instance_; }
-
-    static void tell() { std::cout << "This is singleton\n"; }
+    static void tell()
+    {
+        std::cout << "This is singleton\n";
+    }
 
 private:
-    Singleton() = default;
+    singleton() = default;
 };
 
-Singleton* Singleton::instance_ = nullptr;
+std::shared_ptr<singleton> singleton::instance_ = nullptr;
 
 #endif // WINGMANN_DESIGN_PATTERNS_SINGLETON_SINGLETON_H

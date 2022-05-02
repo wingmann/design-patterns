@@ -8,10 +8,10 @@
 /**
  * Real subject defines the real object that the proxy represents.
  */
-class RealSubject : public Subject {
+class real_subject : public subject {
 public:
-    RealSubject() = default;
-    ~RealSubject() override = default;
+    real_subject() = default;
+    ~real_subject() override = default;
 
 public:
     void request() override { std::cout << "Real subject request\n"; }

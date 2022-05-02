@@ -11,8 +11,8 @@
 
 int main()
 {
-    auto proxy = std::make_shared<Proxy>();
-    proxy->request();
+    auto p = std::make_shared<proxy>();
+    p->request();
 
     return 0;
 }
