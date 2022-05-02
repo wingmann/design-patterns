@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 3.22)
 project(design_patterns VERSION 1.0.0 LANGUAGES CXX)
 
-set(PATTERNS
-    proxy
-    singleton)
+set(BAHAVIORAL_PATTERNS
+    )
 
-foreach(DIRECTORY IN ITEMS ${PATTERNS})
+foreach(DIRECTORY IN ITEMS ${BAHAVIORAL_PATTERNS})
     file(GLOB PROJECT_SOURCES "${DIRECTORY}/*.cpp")
     message(STATUS "Pattern '${DIRECTORY}':")
 
