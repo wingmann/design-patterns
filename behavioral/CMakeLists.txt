@@ -1,5 +1,5 @@
 set(BAHAVIORAL_PATTERNS
-    )
+    command)
 
 foreach(DIRECTORY IN ITEMS ${BAHAVIORAL_PATTERNS})
     file(GLOB PROJECT_SOURCES "${DIRECTORY}/*.cpp")
