@@ -2,7 +2,7 @@
  * Singleton.
  * Ensure a class only has one instance, and provide a global point of access to it.
  * Pattern has creation purpose and deals with object relationships, which are more dynamic.
- * The singleton is often used as a part another design patterns (see Facade and Flyweight).
+ * The Singleton is often used as a part another design patterns (see Facade and Flyweight).
  *
  * When to use:
  * - There must be exactly one instance of a class,
@@ -13,8 +13,7 @@
 
 #include "singleton.h"
 
-int main()
-{
-    singleton::get()->tell();
+int main() {
+    Singleton::get()->tell();
     return 0;
 }

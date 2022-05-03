@@ -9,10 +9,9 @@
 
 #include "proxy.h"
 
-int main()
-{
-    auto p = std::make_shared<proxy>();
-    p->request();
+int main() {
+    Proxy proxy{};
+    proxy.request();
 
     return 0;
 }

@@ -4,12 +4,12 @@
 /**
  * Command declares an interface for all commands.
  */
-class command {
+class Command {
 public:
-    virtual ~command() = default;
+    virtual ~Command() = default;
 
 protected:
-    command() = default;
+    Command() = default;
 
 public:
     virtual void execute() = 0;

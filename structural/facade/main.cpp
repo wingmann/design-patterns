@@ -7,17 +7,16 @@
  * When to use:
  * - You want to provide a simple interface to a complex subsystem.
  * - There are many dependencies between clients and the implementation classes of an abstraction.
- * - You want to layer your subsystems, use a facade to define an entry point to each
+ * - You want to layer your subsystems, use a Facade to define an entry point to each
  *   subsystem level.
  */
 
 #include "facade.h"
 
-int main()
-{
-    auto f = std::make_unique<facade>();
-    f->operation_one();
-    f->operation_two();
+int main() {
+    Facade facade{};
+    facade.operation_one();
+    facade.operation_two();
 
     return 0;
 }

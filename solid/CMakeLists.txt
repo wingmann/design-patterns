@@ -1,5 +1,5 @@
 set(SOLID_PATTERNS
-    )
+    single_responsibility_principle)
 
 foreach(DIRECTORY IN ITEMS ${SOLID_PATTERNS})
     file(GLOB PROJECT_SOURCES "${DIRECTORY}/*.cpp")

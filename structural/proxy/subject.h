@@ -2,13 +2,13 @@
 #define WINGMANN_DESIGN_PATTERNS_PROXY_SUBJECT_H
 
 /**
- * Subject defines the common interface for real_subject and proxy so that a proxy can be used
+ * Subject defines the common interface for RealSubject and proxy so that a proxy can be used
  * anywhere a real subject is expected.
  */
-class subject {
+class Subject {
 public:
-    subject() = default;
-    virtual ~subject() = default;
+    Subject() = default;
+    virtual ~Subject() = default;
 
 public:
     virtual void request() = 0;

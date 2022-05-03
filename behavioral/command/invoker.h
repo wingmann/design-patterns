@@ -6,17 +6,15 @@
 #include <memory>
 #include <utility>
 
-class invoker {
-    std::shared_ptr<command> command_;
+class Invoker {
+    std::shared_ptr<Command> command_;
 
 public:
-    void set(std::shared_ptr<command> command)
-    {
+    void set(std::shared_ptr<Command> command) {
         command_ = std::move(command);
     }
 
-    void confirm()
-    {
+    void confirm() {
         if (command_) command_->execute();
     }
 };

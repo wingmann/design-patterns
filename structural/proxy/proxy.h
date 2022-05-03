@@ -9,18 +9,15 @@
 /*
  * Proxy maintains a reference that lets the proxy access the real subject.
  */
-class proxy : public subject {
-    std::unique_ptr<subject> subject_ = std::make_unique<real_subject>();
+class Proxy : public Subject {
+    std::unique_ptr<Subject> subject_ = std::make_unique<RealSubject>();
 
 public:
-    proxy() = default;
-    ~proxy() override = default;
+    Proxy() = default;
+    ~Proxy() override = default;
 
 public:
-    void request() override
-    {
-        subject_->request();
-    }
+    void request() override { subject_->request(); }
 };
 
 #endif // WINGMANN_DESIGN_PATTERNS_PROXY_PROXY_H
