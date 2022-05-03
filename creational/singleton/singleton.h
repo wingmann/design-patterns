@@ -25,7 +25,8 @@ public:
     Singleton& operator=(const Singleton& singleton) = delete;
 
 public:
-    static std::shared_ptr<Singleton> get() {
+    static std::shared_ptr<Singleton> get()
+    {
         class make_shared_enabler : public Singleton { };
 
         if (!instance_)
@@ -34,7 +35,10 @@ public:
         return instance_;
     }
 
-    static void tell() { std::cout << "This is Singleton\n"; }
+    static void tell()
+    {
+        std::cout << "This is Singleton\n";
+    }
 
 private:
     Singleton() = default;

@@ -10,12 +10,12 @@ public:
     PersistenceManager() = delete;
 
 public:
-    static void save(Journal& journal) {
+    static void save(Journal& journal)
+    {
         auto entries = journal.get_entries();
-        std::cout << "Saved:\n";
 
-        for (auto& e : entries)
-            std::cout << "  " << e << '\n';
+        std::cout << "Saved:\n";
+        for (auto& e : entries) std::cout << "  " << e << '\n';
     }
 };
 

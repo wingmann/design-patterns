@@ -9,7 +9,10 @@ public:
     virtual ~SubsystemOne() = default;
 
 public:
-    static void sub_operation() { std::cout << "Subsystem[1] method called\n"; }
+    static void sub_operation()
+    {
+        std::cout << "Subsystem[1] method called\n";
+    }
 };
 
 #endif // WINGMANN_DESIGN_PATTERNS_STRUCTURAL_FACADE_SUBSYSTEM_ONE_H
