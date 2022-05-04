@@ -1,6 +1,11 @@
 #include "journal.h"
 #include "persistence_manager.h"
 
+/**
+ * Single responsibility principle.
+ * Module, class, or function should have responsibility over a single part of the functionality.
+ */
+
 int main()
 {
     Journal journal{"My journal"};

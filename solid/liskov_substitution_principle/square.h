@@ -6,7 +6,7 @@
 class Square : public Rectangle {
 public:
     Square() = default;
-    explicit Square(double side) :Rectangle{side, side}
+    explicit Square(double side) : Rectangle{side, side}
     {
     }
 
