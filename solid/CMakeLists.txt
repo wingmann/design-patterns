@@ -1,6 +1,7 @@
 set(SOLID_PATTERNS
     single_responsibility_principle
-    open_closed_principle)
+    open_closed_principle
+    liskov_substitution_principle)
 
 foreach(DIRECTORY IN ITEMS ${SOLID_PATTERNS})
     file(GLOB PROJECT_SOURCES "${DIRECTORY}/*.cpp")
