@@ -6,42 +6,42 @@
 
 class Rectangle {
 protected:
-    std::int64_t width_{};
-    std::int64_t height_{};
+    double width{};
+    double height{};
 
 public:
     Rectangle() = default;
-    Rectangle(std::int64_t width, std::int64_t height) : width_{width}, height_{height}
+    Rectangle(double width, double height) : width{width}, height{height}
     {
     }
 
     virtual ~Rectangle() = default;
 
 public:
-    [[nodiscard]] std::int64_t get_width() const
+    [[nodiscard]] double get_width() const
     {
-        return width_;
+        return width;
     }
 
-    virtual void set_width(std::int64_t value)
+    virtual void set_width(double value)
     {
-        width_ = value;
+        width = value;
     }
 
-    [[nodiscard]] std::int64_t get_height() const
+    [[nodiscard]] double get_height() const
     {
-        return height_;
+        return height;
     }
 
-    virtual void set_height(std::int64_t value)
+    virtual void set_height(double value)
     {
-        height_ = value;
+        height = value;
     }
 
 public:
-    [[nodiscard]] std::int64_t area() const
+    [[nodiscard]] double area() const
     {
-        return width_ * height_;
+        return width * height;
     }
 };
 
