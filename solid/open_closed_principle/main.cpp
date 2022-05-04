@@ -1,3 +1,9 @@
+/**
+ * Open–closed principle.
+ * Classes, modules, functions, etc. should be open for extension, but closed for modification.
+ * Open-closed principle is one of the five SOLID principles of object-oriented design.
+ */
+
 #include "product.h"
 #include "color.h"
 #include "size.h"
@@ -8,12 +14,6 @@
 
 #include <memory>
 #include <iostream>
-
-/**
- * Open–closed principle.
- * Classes, modules, functions, etc. should be open for extension, but closed for modification.
- * Open-closed principle is one of the five SOLID principles of object-oriented design.
- */
 
 int main()
 {
