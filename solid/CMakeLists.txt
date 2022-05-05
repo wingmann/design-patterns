@@ -2,7 +2,8 @@ set(SOLID_PATTERNS
     single_responsibility_principle
     open_closed_principle
     liskov_substitution_principle
-    interface_segregation_principle)
+    interface_segregation_principle
+    dependency_inversion_principle)
 
 foreach(DIRECTORY IN ITEMS ${SOLID_PATTERNS})
     file(GLOB PROJECT_SOURCES "${DIRECTORY}/*.cpp")
