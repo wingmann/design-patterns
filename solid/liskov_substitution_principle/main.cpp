@@ -5,12 +5,11 @@
  * objects of type S without altering any of the desirable properties of that program.
  */
 
+#include "process.h"
 #include "rectangle.h"
 #include "square.h"
-#include "process.h"
 
-int main()
-{
+int main() {
     Rectangle rectangle{32, 64};
     process(rectangle);
 

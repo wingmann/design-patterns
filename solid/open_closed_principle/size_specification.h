@@ -1,8 +1,8 @@
 #ifndef WINGMANN_DESIGN_PATTERNS_SOLID_OPEN_CLOSED_PRINCIPLE_SIZE_SPECIFICATION_H
 #define WINGMANN_DESIGN_PATTERNS_SOLID_OPEN_CLOSED_PRINCIPLE_SIZE_SPECIFICATION_H
 
-#include "size.h"
 #include "product.h"
+#include "size.h"
 #include "specification.h"
 
 #include <memory>
@@ -12,15 +12,12 @@ class SizeSpecification : public Specification<Product> {
 
 public:
     SizeSpecification() = delete;
-    explicit SizeSpecification(Size size) : size_{size}
-    {
-    }
+    explicit SizeSpecification(Size size) : size_{size} {}
 
     ~SizeSpecification() override = default;
 
 public:
-    [[nodiscard]] bool is_satisfied(std::shared_ptr<Product> item) const override
-    {
+    [[nodiscard]] bool is_satisfied(std::shared_ptr<Product> item) const override {
         return item->size == size_;
     }
 };

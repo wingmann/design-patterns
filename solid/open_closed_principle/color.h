@@ -4,7 +4,7 @@
 enum class Color {
     Red,
     Green,
-    Blue
+    Blue,
 };
 
 #endif // WINGMANN_DESIGN_PATTERNS_SOLID_OPEN_CLOSED_PRINCIPLE_COLOR_H

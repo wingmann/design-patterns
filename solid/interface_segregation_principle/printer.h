@@ -7,8 +7,7 @@
 
 class Printer : public IPrinter {
 public:
-    void print(Document& document) const override
-    {
+    void print(Document& document) const override {
         std::cout << "Printer called\n";
     }
 };

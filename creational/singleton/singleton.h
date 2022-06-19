@@ -25,18 +25,14 @@ public:
     Singleton& operator=(const Singleton& singleton) = delete;
 
 public:
-    static std::shared_ptr<Singleton> get()
-    {
-        class make_shared_enabler : public Singleton { };
+    static std::shared_ptr<Singleton> get() {
+        class make_shared_enabler : public Singleton {};
 
-        if (!instance_)
-            instance_ = std::make_shared<make_shared_enabler>();
-
+        if (!instance_) instance_ = std::make_shared<make_shared_enabler>();
         return instance_;
     }
 
-    static void tell()
-    {
+    static void tell() {
         std::cout << "This is Singleton\n";
     }
 

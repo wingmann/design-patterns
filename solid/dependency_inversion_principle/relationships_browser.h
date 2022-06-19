@@ -3,8 +3,8 @@
 
 #include "person.h"
 
-#include <vector>
 #include <memory>
+#include <vector>
 
 class RelationshipsBrowser {
 public:

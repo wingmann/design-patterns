@@ -12,8 +12,7 @@ public:
 public:
     std::vector<std::shared_ptr<Product>> filter_with_specification(
         std::vector<std::shared_ptr<Product>> items,
-        Specification<Product>& specification) override
-    {
+        Specification<Product>& specification) override {
         std::vector<std::shared_ptr<Product>> filtered_items{};
 
         for (auto& i : items)

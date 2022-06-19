@@ -4,7 +4,7 @@
 enum class Size {
     Small,
     Medium,
-    Large
+    Large,
 };
 
 #endif // WINGMANN_DESIGN_PATTERNS_SOLID_OPEN_CLOSED_PRINCIPLE_SIZE_H

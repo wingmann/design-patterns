@@ -8,8 +8,7 @@
  */
 class Receiver {
 public:
-    static void action()
-    {
+    static void action() {
         std::cout << "Receiver: execute action\n";
     }
 };

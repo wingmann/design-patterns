@@ -9,8 +9,7 @@ public:
     virtual ~SubsystemTwo() = default;
 
 public:
-    static void sub_operation()
-    {
+    static void sub_operation() {
         std::cout << "Subsystem[2] method called\n";
     }
 };

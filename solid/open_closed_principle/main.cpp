@@ -4,19 +4,18 @@
  * Open-closed principle is one of the five SOLID principles of object-oriented design.
  */
 
-#include "product.h"
-#include "color.h"
-#include "size.h"
 #include "better_filter.h"
+#include "color.h"
 #include "color_specification.h"
-#include "size_specification.h"
 #include "combining_specification.h"
+#include "size.h"
+#include "size_specification.h"
+#include "product.h"
 
 #include <memory>
 #include <iostream>
 
-int main()
-{
+int main() {
     Product apple{"Apple", Color::Green, Size::Small};
     Product tree{"Tree", Color::Green, Size::Large};
     Product house{"House", Color::Blue, Size::Large};

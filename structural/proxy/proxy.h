@@ -1,8 +1,8 @@
 #ifndef WINGMANN_DESIGN_PATTERNS_PROXY_PROXY_H
 #define WINGMANN_DESIGN_PATTERNS_PROXY_PROXY_H
 
-#include "subject.h"
 #include "real_subject.h"
+#include "subject.h"
 
 #include <memory>
 
@@ -17,8 +17,7 @@ public:
     ~Proxy() override = default;
 
 public:
-    void request() override
-    {
+    void request() override {
         subject_->request();
     }
 };

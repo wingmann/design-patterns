@@ -7,8 +7,7 @@
 
 class Scanner : public IScanner {
 public:
-    void scan(Document& document) const override
-    {
+    void scan(Document& document) const override {
         std::cout << "Scanner called\n";
     }
 };

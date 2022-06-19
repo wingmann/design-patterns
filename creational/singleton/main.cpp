@@ -13,8 +13,7 @@
 
 #include "singleton.h"
 
-int main()
-{
+int main() {
     Singleton::get()->tell();
     return 0;
 }

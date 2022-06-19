@@ -12,11 +12,10 @@
  */
 
 #include "concrete_command.h"
-#include "receiver.h"
 #include "invoker.h"
+#include "receiver.h"
 
-int main()
-{
+int main() {
     auto command = std::make_shared<ConcreteCommand>(std::make_shared<Receiver>());
 
     auto invoker = std::make_shared<Invoker>();

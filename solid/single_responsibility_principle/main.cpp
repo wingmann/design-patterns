@@ -6,8 +6,7 @@
 #include "journal.h"
 #include "persistence_manager.h"
 
-int main()
-{
+int main() {
     Journal journal{"My journal"};
     journal.add_entry("First note");
     journal.add_entry("Second note");

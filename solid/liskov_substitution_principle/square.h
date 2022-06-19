@@ -6,20 +6,16 @@
 class Square : public Rectangle {
 public:
     Square() = default;
-    explicit Square(double side) : Rectangle{side, side}
-    {
-    }
+    explicit Square(double side) : Rectangle{side, side} {}
 
     ~Square() override = default;
 
 public:
-    void set_width(double value) override
-    {
+    void set_width(double value) override {
         width = height = value;
     }
 
-    void set_height(double value) override
-    {
+    void set_height(double value) override {
         height = width = value;
     }
 };

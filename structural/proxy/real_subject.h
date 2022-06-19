@@ -14,8 +14,7 @@ public:
     ~RealSubject() override = default;
 
 public:
-    void request() override
-    {
+    void request() override {
         std::cout << "Real subject request\n";
     }
 };
