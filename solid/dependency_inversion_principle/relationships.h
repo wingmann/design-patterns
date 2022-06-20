@@ -14,12 +14,14 @@ public:
     virtual ~Relationships() = default;
 
 public:
-    void add_parent_and_child(const Person& parent, const Person& child) {
-        relations_.push_back({parent, Relationship::Parent, child});
-        relations_.push_back({child, Relationship::Child, parent});
+    void add_parent_and_child(const Person& parent, const Person& child)
+    {
+        relations_.emplace_back(parent, Relationship::Parent, child);
+        relations_.emplace_back(child, Relationship::Child, parent);
     }
 
-    std::vector<std::shared_ptr<Person>> find_all_children_of(const std::string& name) override {
+    std::vector<std::shared_ptr<Person>> find_all_children_of(const std::string& name) override
+    {
         std::vector<std::shared_ptr<Person>> result{};
 
         for (auto&& [first, relation, second] : relations_)

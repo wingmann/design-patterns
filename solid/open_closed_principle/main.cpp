@@ -15,7 +15,8 @@
 #include <memory>
 #include <iostream>
 
-int main() {
+int main()
+{
     Product apple{"Apple", Color::Green, Size::Small};
     Product tree{"Tree", Color::Green, Size::Large};
     Product house{"House", Color::Blue, Size::Large};
@@ -23,8 +24,7 @@ int main() {
     auto items = std::vector{
         std::make_shared<Product>(apple),
         std::make_shared<Product>(tree),
-        std::make_shared<Product>(house)
-    };
+        std::make_shared<Product>(house)};
 
     BetterFilter filter{};
 

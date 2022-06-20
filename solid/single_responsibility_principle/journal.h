@@ -11,17 +11,18 @@ class Journal {
 
 public:
     Journal() = delete;
-    explicit Journal(std::string title) : title_{std::move(title)} {}
-
+    explicit Journal(std::string title) : title_{std::move(title)} { }
     virtual ~Journal() = default;
 
 public:
-    void add_entry(const std::string& entry) {
+    void add_entry(const std::string& entry)
+    {
         static std::size_t count{};
         entries_.emplace_back(std::to_string(++count) + ": " + entry);
     }
 
-    std::vector<std::string> get_entries() {
+    std::vector<std::string> get_entries()
+    {
         return entries_;
     }
 };

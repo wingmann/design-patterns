@@ -8,9 +8,7 @@
  */
 class Receiver {
 public:
-    static void action() {
-        std::cout << "Receiver: execute action\n";
-    }
+    static void action() { std::cout << "Receiver: execute action\n"; }
 };
 
 #endif // WINGMANN_DESIGN_PATTERNS_BEHAVIORAL_COMMAND_RECEIVER_H

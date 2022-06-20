@@ -7,7 +7,8 @@
 
 class Research {
 public:
-    Research(RelationshipsBrowser& browser) {
+    Research(RelationshipsBrowser& browser)
+    {
         for (auto& child : browser.find_all_children_of("John"))
             std::cout << "John has a child called " << child->name << '\n';
     }

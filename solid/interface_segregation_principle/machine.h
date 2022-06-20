@@ -3,23 +3,29 @@
 
 #include "interfaces/imachine.h"
 
+#include <iostream>
+
 class Machine : public IMachine {
     IPrinter& printer_;
     IScanner& scanner_;
 
 public:
     Machine() = delete;
-    Machine(IPrinter& printer, IScanner& scanner) : printer_{printer}, scanner_{scanner} {}
+    Machine(IPrinter& printer, IScanner& scanner) : printer_{printer}, scanner_{scanner}
+    {
+    }
 
     virtual ~Machine() = default;
 
 public:
-    void print(Document& document) const override {
+    void print(Document& document) const override
+    {
         std::cout << "Machine -> ";
         printer_.print(document);
     }
 
-    void scan(Document& document) const override {
+    void scan(Document& document) const override
+    {
         std::cout << "Machine -> ";
         scanner_.scan(document);
     }

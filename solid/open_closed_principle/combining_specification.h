@@ -11,12 +11,16 @@ class CombiningSpecification : public Specification<T> {
 public:
     CombiningSpecification() = default;
     CombiningSpecification(Specification<T>& first, Specification<T>& second)
-        : first_spec_{first}, second_spec_{second} {}
+        : first_spec_{first},
+          second_spec_{second}
+    {
+    }
 
     ~CombiningSpecification() override = default;
 
 public:
-    bool is_satisfied(std::shared_ptr<T> item) const override {
+    bool is_satisfied(std::shared_ptr<T> item) const override
+    {
         return first_spec_.is_satisfied(item) && second_spec_.is_satisfied(item);
     }
 };

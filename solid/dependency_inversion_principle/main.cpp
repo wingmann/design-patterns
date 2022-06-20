@@ -8,7 +8,8 @@
 #include "relationships.h"
 #include "research.h"
 
-int main() {
+int main()
+{
     Person parent{"John"};
     Person first_child{"Mark"};
     Person second_child{"Alice"};

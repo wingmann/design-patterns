@@ -14,8 +14,9 @@ public:
     virtual ~Filter() = default;
 
 public:
-    virtual std::vector<std::shared_ptr<T>> filter_with_specification(
-        std::vector<std::shared_ptr<T>> items, Specification<Product>& specification) = 0;
+    virtual std::vector<std::shared_ptr<T>>
+    filter_with_specification(std::vector<std::shared_ptr<T>> items,
+                              Specification<Product>& specification) = 0;
 };
 
 #endif // WINGMANN_DESIGN_PATTERNS_SOLID_OPEN_CLOSED_PRINCIPLE_FILTER_H

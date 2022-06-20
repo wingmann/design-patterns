@@ -12,12 +12,12 @@ class ColorSpecification : public Specification<Product> {
 
 public:
     ColorSpecification() = delete;
-    explicit ColorSpecification(Color color) : color_{color} {}
-
+    explicit ColorSpecification(Color color) : color_{color} { }
     ~ColorSpecification() override = default;
 
 public:
-    [[nodiscard]] bool is_satisfied(std::shared_ptr<Product> item) const override {
+    [[nodiscard]] bool is_satisfied(std::shared_ptr<Product> item) const override
+    {
         return item->color == color_;
     }
 };

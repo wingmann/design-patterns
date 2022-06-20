@@ -13,7 +13,8 @@
 
 #include "facade.h"
 
-int main() {
+int main()
+{
     Facade facade{};
     facade.operation_one();
     facade.operation_two();

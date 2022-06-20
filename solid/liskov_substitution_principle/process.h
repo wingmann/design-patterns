@@ -3,7 +3,8 @@
 
 #include "rectangle.h"
 
-void process(Rectangle& rectangle) {
+void process(Rectangle& rectangle)
+{
     auto width = rectangle.get_width();
     rectangle.set_height(10);
 

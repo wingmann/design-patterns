@@ -9,7 +9,8 @@
 #include "rectangle.h"
 #include "square.h"
 
-int main() {
+int main()
+{
     Rectangle rectangle{32, 64};
     process(rectangle);
 

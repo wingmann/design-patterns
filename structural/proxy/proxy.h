@@ -17,9 +17,7 @@ public:
     ~Proxy() override = default;
 
 public:
-    void request() override {
-        subject_->request();
-    }
+    void request() override { subject_->request(); }
 };
 
 #endif // WINGMANN_DESIGN_PATTERNS_PROXY_PROXY_H

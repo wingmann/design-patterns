@@ -12,12 +12,12 @@ class SizeSpecification : public Specification<Product> {
 
 public:
     SizeSpecification() = delete;
-    explicit SizeSpecification(Size size) : size_{size} {}
-
+    explicit SizeSpecification(Size size) : size_{size} { }
     ~SizeSpecification() override = default;
 
 public:
-    [[nodiscard]] bool is_satisfied(std::shared_ptr<Product> item) const override {
+    [[nodiscard]] bool is_satisfied(std::shared_ptr<Product> item) const override
+    {
         return item->size == size_;
     }
 };

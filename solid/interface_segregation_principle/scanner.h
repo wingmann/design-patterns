@@ -7,9 +7,7 @@
 
 class Scanner : public IScanner {
 public:
-    void scan(Document& document) const override {
-        std::cout << "Scanner called\n";
-    }
+    void scan(Document& document) const override { std::cout << "Scanner called\n"; }
 };
 
 #endif // WINGMANN_DESIGN_PATTERNS_SOLID_INTERFACE_SEGREGATION_PRINCIPLE_SCANNER_H

@@ -15,14 +15,13 @@ class ConcreteCommand : public Command {
 
 public:
     ConcreteCommand() = delete;
-    explicit ConcreteCommand(std::shared_ptr<Receiver> receiver) : receiver_{std::move(receiver)} {}
-
+    explicit ConcreteCommand(std::shared_ptr<Receiver> receiver) : receiver_{std::move(receiver)}
+    {
+    }
     ~ConcreteCommand() override = default;
 
 public:
-    void execute() override {
-        receiver_->action();
-    }
+    void execute() override { receiver_->action(); }
 };
 
 #endif // WINGMANN_DESIGN_PATTERNS_BEHAVIORAL_COMMAND_CONCRETE_COMMAND_H

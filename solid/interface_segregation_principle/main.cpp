@@ -7,7 +7,8 @@
 #include "printer.h"
 #include "scanner.h"
 
-int main() {
+int main()
+{
     Document document{"link.txt", "https://isocpp.org/"};
 
     Printer printer{};

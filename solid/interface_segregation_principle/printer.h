@@ -7,9 +7,7 @@
 
 class Printer : public IPrinter {
 public:
-    void print(Document& document) const override {
-        std::cout << "Printer called\n";
-    }
+    void print(Document& document) const override { std::cout << "Printer called\n"; }
 };
 
 #endif // WINGMANN_DESIGN_PATTERNS_SOLID_INTERFACE_SEGREGATION_PRINCIPLE_PRINTER_H

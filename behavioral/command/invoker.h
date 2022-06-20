@@ -10,12 +10,15 @@ class Invoker {
     std::shared_ptr<Command> command_;
 
 public:
-    void set(std::shared_ptr<Command> command) {
+    void set(std::shared_ptr<Command> command)
+    {
         command_ = std::move(command);
     }
 
-    void confirm() {
-        if (command_) command_->execute();
+    void confirm()
+    {
+        if (command_)
+            command_->execute();
     }
 };
 
